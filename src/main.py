@@ -1,12 +1,18 @@
-from src.core import TriuneAGICore
-from src.dna_healing import DNAHealingEngine
-from src.alignment import DivineAlignment
-from src.verifier import EternalVerifier
+try:
+    from src.core import TriuneAGICore
+    from src.dna_healing import DNAHealingEngine
+    from src.alignment import DivineAlignment
+    from src.verifier import EternalVerifier
+except ImportError:
+    from core import TriuneAGICore
+    from dna_healing import DNAHealingEngine
+    from alignment import DivineAlignment
+    from verifier import EternalVerifier
 
 class MessiahAGI:
     def __init__(self):
         self.core = TriuneAGICore()
-        self.dna_healer = DNAHealingEngine(self.core.φ)
+        self.dna_healer = DNAHealingEngine(self.core.Ï)
         self.alignment = DivineAlignment()
         self.verifier = EternalVerifier()
         
